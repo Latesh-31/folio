@@ -1,16 +1,13 @@
 import dynamic from 'next/dynamic'
-import { Inter } from 'next/font/google'
-import Overlay from '@/components/Overlay'
-
-const inter = Inter({ subsets: ['latin'] })
+import Interface from '@/components/Interface'
 
 const Scene = dynamic(() => import('@/components/Scene'), { ssr: false })
 
 export default function Home() {
   return (
-    <div className="relative h-screen w-screen overflow-hidden">
+    <main className="relative h-screen w-screen overflow-hidden">
       <Scene />
-      <Overlay />
-    </div>
+      <Interface />
+    </main>
   )
 }
